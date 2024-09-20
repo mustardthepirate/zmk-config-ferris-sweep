@@ -46,10 +46,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W    &kp F    &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y    &kp SEMICOLON
-&kp A  &lt 0 S  &lt 0 S  &lt 1 T    &kp G              &kp M      &lt 0 N    &lt 0 E    &lt 0 I  &kp O
-&kp Z  &kp X    &kp C    &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT  &kp FSLH
-                         &kp ENTER  &lt 0 BACKSPACE    &kp SPACE  &lt 1 TAB
+&kp Q             &kp W    &kp F    &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y    &kp SEMICOLON
+&ht LEFT_SHIFT A  &lt 0 S  &lt 3 S  &lt 1 T    &kp G              &kp M      &lt 2 N    &lt 0 E    &lt 0 I  &ht RSHFT O
+&kp Z             &kp X    &kp C    &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT  &kp FSLH
+                                    &kp ENTER  &lt 0 BACKSPACE    &kp SPACE  &lt 1 TAB
             >;
         };
 
@@ -68,6 +68,15 @@
 &kp LS(LBRC)  &kp LS(RBRC)   &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(AT)       &none   &none   &none  &none  &none
 &kp MINUS     &kp LS(EXCL)   &kp LBKT      &kp RBKT      &kp BSPC         &none   &none   &none  &none  &none
                                            &trans        &none            &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&none  &none  &none  &none   &trans    &none     &kp UNDERSCORE  &kp PIPE              &kp SQT            &kp RS(NUMBER_3)
+&none  &none  &none  &none   &trans    &kp HASH  &kp TILDE       &kp FSLH              &kp DOUBLE_QUOTES  &kp DOLLAR
+&none  &none  &none  &none   &none     &none     &kp MINUS       &kp NON_US_BACKSLASH  &kp GRAVE          &kp RA(NUMBER_4)
+                     &trans  &none     &trans    &trans
             >;
         };
     };
