@@ -58,9 +58,9 @@
 
         Basic {
             bindings = <
-&kp Q     &kp W       &trans     &trans      &trans    &trans              &trans  &trans         &trans  &trans
-&kt CAPS  &caps_word  &kp COLON  &kp ESCAPE  &trans    &kp RC(RS(ESCAPE))  &trans  &trans         &trans  &caps_word
-&trans    &trans      &trans     &kp EXCL    &trans    &trans              &trans  &sk RIGHT_GUI  &trans  &trans
+&kp Q     &kp W       &trans     &trans      &trans    &trans              &kp C_SLEEP         &none          &trans  &kp C_POWER
+&kt CAPS  &caps_word  &kp COLON  &kp ESCAPE  &trans    &kp RC(RS(ESCAPE))  &kp K_CONTEXT_MENU  &trans         &trans  &caps_word
+&trans    &trans      &trans     &kp EXCL    &trans    &trans              &trans              &sk RIGHT_GUI  &trans  &trans
                                  &trans      &trans    &trans              &trans
             >;
         };
