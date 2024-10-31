@@ -46,6 +46,50 @@
         };
     };
 
+    macros {
+        apos_t: apos_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp T>;
+            label = "APOS_T";
+        };
+
+        apos_re: apos_re {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp R &kp E>;
+            label = "APOS_RE";
+        };
+
+        apos_ll: apos_ll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp L &kp L>;
+            label = "APOS_LL";
+        };
+
+        apos_s: apos_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp S>;
+            label = "APOS_S";
+        };
+
+        apos_d: apos_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp D>;
+            label = "APOS_D";
+        };
+
+        apos_ve: apos_ve {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp V &kp E>;
+            label = "APOS_VE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -60,9 +104,9 @@
 
         Basic {
             bindings = <
-&kp Q     &kp W       &trans     &trans      &trans    &trans              &kp C_SLEEP         &none          &trans          &kp C_POWER
-&kt CAPS  &caps_word  &kp COLON  &kp ESCAPE  &trans    &kp RC(RS(ESCAPE))  &kp C_AC_CUT        &kp C_AC_COPY  &kp C_AC_PASTE  &caps_word
-&trans    &trans      &trans     &kp EXCL    &trans    &trans              &kp K_CONTEXT_MENU  &sk RIGHT_GUI  &trans          &kp K_CONTEXT_MENU
+&kp Q     &kp W       &trans     &trans      &trans    &trans              &kp LA(F4)          &kp LG(L)      &trans     &kp C_POWER
+&kt CAPS  &caps_word  &kp COLON  &kp ESCAPE  &none     &kp RC(RS(ESCAPE))  &kp LC(X)           &kp LC(C)      &kp LC(P)  &caps_word
+&trans    &trans      &trans     &kp EXCL    &trans    &trans              &kp K_CONTEXT_MENU  &sk RIGHT_GUI  &trans     &kp K_CONTEXT_MENU
                                  &trans      &trans    &trans              &trans
             >;
         };
@@ -123,18 +167,18 @@
 
         MediaControl {
             bindings = <
-&bootloader  &trans  &bt BT_PRV  &bt BT_NXT  &trans    &trans  &trans        &none             &trans           &trans
-&trans       &trans  &trans      &trans      &trans    &trans  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOLUME_UP  &trans
-&bt BT_CLR   &trans  &trans      &trans      &trans    &trans  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT       &trans
-                                 &trans      &trans    &trans  &trans
+&bootloader  &trans    &bt BT_PRV  &bt BT_NXT  &trans      &trans  &apos_ll        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans
+&trans       &apos_re  &apos_s     &apos_t     &trans      &trans  &kp C_VOL_DN    &kp C_MUTE            &kp C_VOLUME_UP       &trans
+&bt BT_CLR   &trans    &trans      &apos_d     &apos_ve    &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE      &kp C_NEXT            &trans
+                                   &trans      &trans      &trans  &trans
             >;
         };
 
         OtherNumber {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &soft_off  &trans      &kp K_SLEEP  &trans  &kp K_POWER
-&kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans     &kp K_LOCK  &trans       &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans     &trans      &trans       &trans  &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &soft_off  &trans     &kp K_SLEEP  &trans  &kp K_POWER
+&kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans     &kp LG(L)  &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans       &trans  &trans
                         &trans  &trans    &trans     &trans
             >;
         };
