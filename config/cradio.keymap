@@ -62,7 +62,7 @@
             bindings = <
 &kp Q     &kp W       &trans     &trans      &trans    &trans              &kp C_SLEEP         &none          &trans          &kp C_POWER
 &kt CAPS  &caps_word  &kp COLON  &kp ESCAPE  &trans    &kp RC(RS(ESCAPE))  &kp C_AC_CUT        &kp C_AC_COPY  &kp C_AC_PASTE  &caps_word
-&trans    &trans      &trans     &kp EXCL    &trans    &trans              &kp K_CONTEXT_MENU  &sk RIGHT_GUI  &trans          &trans
+&trans    &trans      &trans     &kp EXCL    &trans    &trans              &kp K_CONTEXT_MENU  &sk RIGHT_GUI  &trans          &kp K_CONTEXT_MENU
                                  &trans      &trans    &trans              &trans
             >;
         };
@@ -96,10 +96,10 @@
 
         Directions {
             bindings = <
-&kp HASH  &kp LS(COLON)  &kp LS(LT)      &kp PRINTSCREEN  &none       &none   &none              &none  &none         &none
-&kp LEFT  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT        &none       &none   &kp RIGHT_CONTROL  &none  &kp LEFT_ALT  &kp RIGHT_SHIFT
-&kp HOME  &kp PG_UP      &kp PAGE_DOWN   &kp END          &kp BSPC    &none   &none              &none  &none         &none
-                                         &trans           &none       &trans  &trans
+&kp HASH  &kp LS(COLON)  &kp LS(LT)      &kp PRINTSCREEN  &none         &none   &none              &none  &none         &none
+&kp LEFT  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT        &kp DELETE    &none   &kp RIGHT_CONTROL  &none  &kp LEFT_ALT  &kp RIGHT_SHIFT
+&kp HOME  &kp PG_UP      &kp PAGE_DOWN   &kp END          &kp BSPC      &none   &none              &none  &none         &none
+                                         &trans           &none         &trans  &trans
             >;
         };
 
