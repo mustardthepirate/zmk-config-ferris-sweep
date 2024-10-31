@@ -132,10 +132,10 @@
 
         OtherNumber {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans      &kp K_SLEEP  &trans  &kp K_POWER
-&kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans  &kp K_LOCK  &trans       &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans       &trans  &trans
-                        &trans  &trans    &trans  &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &soft_off  &trans      &kp K_SLEEP  &trans  &kp K_POWER
+&kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans     &kp K_LOCK  &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans     &trans      &trans       &trans  &trans
+                        &trans  &trans    &trans     &trans
             >;
         };
     };
