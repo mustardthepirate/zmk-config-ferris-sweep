@@ -122,10 +122,10 @@
 
         Programming {
             bindings = <
-&kp HASH      &kp LS(COLON)  &kp LS(LT)    &kp LS(GT)    &kp LA(EQUAL)    &none   &none   &none  &none  &none
-&kp LS(LBRC)  &kp LS(RBRC)   &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(AT)       &none   &none   &none  &none  &none
-&kp MINUS     &kp LS(EXCL)   &kp LBKT      &kp RBKT      &kp BSPC         &none   &none   &none  &none  &none
-                                           &trans        &none            &trans  &trans
+&kp HASH      &kp LS(COLON)  &kp LS(LT)    &kp LS(GT)    &kp EQUAL     &none   &none   &none  &none  &none
+&kp LS(LBRC)  &kp LS(RBRC)   &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(AT)    &none   &none   &none  &none  &none
+&kp MINUS     &kp LS(EXCL)   &kp LBKT      &kp RBKT      &kp BSPC      &none   &none   &none  &none  &none
+                                           &trans        &none         &trans  &trans
             >;
         };
 
@@ -140,19 +140,19 @@
 
         Directions {
             bindings = <
-&kp HASH  &kp LS(COLON)  &kp LS(LT)      &kp PRINTSCREEN  &none         &none   &none              &none  &none         &none
-&kp LEFT  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT        &kp DELETE    &none   &kp RIGHT_CONTROL  &none  &kp LEFT_ALT  &kp RIGHT_SHIFT
-&kp HOME  &kp PG_UP      &kp PAGE_DOWN   &kp END          &kp BSPC      &none   &none              &none  &none         &none
-                                         &trans           &none         &trans  &trans
+&kp HASH  &kp LS(COLON)  &kp LS(LT)      &kp PRINTSCREEN  &none         &none         &none              &none  &none         &none
+&kp LEFT  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT        &kp DELETE    &kp LEFT_GUI  &kp RIGHT_CONTROL  &none  &kp LEFT_ALT  &kp RIGHT_SHIFT
+&kp HOME  &kp PG_UP      &kp PAGE_DOWN   &kp END          &kp BSPC      &none         &none              &none  &none         &none
+                                         &trans           &none         &trans        &trans
             >;
         };
 
         FunctionKeys {
             bindings = <
-&none           &none  &none         &none      &trans    &none   &kp F9  &kp F10  &kp F11  &kp F12
-&kp LEFT_SHIFT  &none  &kp LEFT_ALT  &kp RCTRL  &trans    &none   &kp F5  &kp F6   &kp F7   &kp F8
-&none           &none  &none         &none      &none     &none   &kp F1  &kp F2   &kp F3   &kp F4
-                                     &trans     &none     &trans  &trans
+&none           &none  &none         &none      &trans          &none   &kp F9  &kp F10  &kp F11  &kp F12
+&kp LEFT_SHIFT  &none  &kp LEFT_ALT  &kp RCTRL  &kp LEFT_GUI    &none   &kp F5  &kp F6   &kp F7   &kp F8
+&none           &none  &none         &none      &none           &none   &kp F1  &kp F2   &kp F3   &kp F4
+                                     &trans     &none           &trans  &trans
             >;
         };
 
@@ -178,7 +178,7 @@
             bindings = <
 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &soft_off  &trans     &kp K_SLEEP  &trans  &kp K_POWER
 &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans     &kp LG(L)  &trans       &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans       &trans  &sys_reset
                         &trans  &trans    &trans     &trans
             >;
         };
